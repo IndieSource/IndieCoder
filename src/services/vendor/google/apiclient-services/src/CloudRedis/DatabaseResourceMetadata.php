@@ -26,8 +26,6 @@ class DatabaseResourceMetadata extends \Google\Collection
   protected $backupConfigurationDataType = '';
   protected $backupRunType = BackupRun::class;
   protected $backupRunDataType = '';
-  protected $backupdrConfigurationType = BackupDRConfiguration::class;
-  protected $backupdrConfigurationDataType = '';
   /**
    * @var string
    */
@@ -132,20 +130,6 @@ class DatabaseResourceMetadata extends \Google\Collection
   public function getBackupRun()
   {
     return $this->backupRun;
-  }
-  /**
-   * @param BackupDRConfiguration
-   */
-  public function setBackupdrConfiguration(BackupDRConfiguration $backupdrConfiguration)
-  {
-    $this->backupdrConfiguration = $backupdrConfiguration;
-  }
-  /**
-   * @return BackupDRConfiguration
-   */
-  public function getBackupdrConfiguration()
-  {
-    return $this->backupdrConfiguration;
   }
   /**
    * @param string

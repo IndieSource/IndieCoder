@@ -23,10 +23,6 @@ class Instance extends \Google\Collection
   /**
    * @var string
    */
-  public $capacityStepSizeGb;
-  /**
-   * @var string
-   */
   public $createTime;
   /**
    * @var bool
@@ -58,14 +54,6 @@ class Instance extends \Google\Collection
    * @var string[]
    */
   public $labels;
-  /**
-   * @var string
-   */
-  public $maxCapacityGb;
-  /**
-   * @var string
-   */
-  public $minCapacityGb;
   /**
    * @var string
    */
@@ -111,20 +99,6 @@ class Instance extends \Google\Collection
    */
   public $tier;
 
-  /**
-   * @param string
-   */
-  public function setCapacityStepSizeGb($capacityStepSizeGb)
-  {
-    $this->capacityStepSizeGb = $capacityStepSizeGb;
-  }
-  /**
-   * @return string
-   */
-  public function getCapacityStepSizeGb()
-  {
-    return $this->capacityStepSizeGb;
-  }
   /**
    * @param string
    */
@@ -250,34 +224,6 @@ class Instance extends \Google\Collection
   public function getLabels()
   {
     return $this->labels;
-  }
-  /**
-   * @param string
-   */
-  public function setMaxCapacityGb($maxCapacityGb)
-  {
-    $this->maxCapacityGb = $maxCapacityGb;
-  }
-  /**
-   * @return string
-   */
-  public function getMaxCapacityGb()
-  {
-    return $this->maxCapacityGb;
-  }
-  /**
-   * @param string
-   */
-  public function setMinCapacityGb($minCapacityGb)
-  {
-    $this->minCapacityGb = $minCapacityGb;
-  }
-  /**
-   * @return string
-   */
-  public function getMinCapacityGb()
-  {
-    return $this->minCapacityGb;
   }
   /**
    * @param string

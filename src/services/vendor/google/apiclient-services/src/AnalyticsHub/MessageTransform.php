@@ -22,28 +22,10 @@ class MessageTransform extends \Google\Model
   /**
    * @var bool
    */
-  public $disabled;
-  /**
-   * @var bool
-   */
   public $enabled;
   protected $javascriptUdfType = JavaScriptUDF::class;
   protected $javascriptUdfDataType = '';
 
-  /**
-   * @param bool
-   */
-  public function setDisabled($disabled)
-  {
-    $this->disabled = $disabled;
-  }
-  /**
-   * @return bool
-   */
-  public function getDisabled()
-  {
-    return $this->disabled;
-  }
   /**
    * @param bool
    */

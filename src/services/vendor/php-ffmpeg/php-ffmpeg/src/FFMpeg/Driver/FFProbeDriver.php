@@ -22,8 +22,6 @@ class FFProbeDriver extends AbstractBinary
 {
     /**
      * {@inheritdoc}
-     *
-     * @return string
      */
     public function getName()
     {

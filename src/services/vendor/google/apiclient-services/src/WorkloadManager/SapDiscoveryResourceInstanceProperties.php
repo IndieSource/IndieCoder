@@ -40,8 +40,6 @@ class SapDiscoveryResourceInstanceProperties extends \Google\Collection
    * @var bool
    */
   public $isDrSite;
-  protected $osKernelVersionType = SapDiscoveryResourceInstancePropertiesKernelVersion::class;
-  protected $osKernelVersionDataType = '';
   /**
    * @var string
    */
@@ -130,20 +128,6 @@ class SapDiscoveryResourceInstanceProperties extends \Google\Collection
   public function getIsDrSite()
   {
     return $this->isDrSite;
-  }
-  /**
-   * @param SapDiscoveryResourceInstancePropertiesKernelVersion
-   */
-  public function setOsKernelVersion(SapDiscoveryResourceInstancePropertiesKernelVersion $osKernelVersion)
-  {
-    $this->osKernelVersion = $osKernelVersion;
-  }
-  /**
-   * @return SapDiscoveryResourceInstancePropertiesKernelVersion
-   */
-  public function getOsKernelVersion()
-  {
-    return $this->osKernelVersion;
   }
   /**
    * @param string

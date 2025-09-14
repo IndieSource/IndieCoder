@@ -20,28 +20,10 @@ namespace Google\Service\PaymentsResellerSubscription;
 class GoogleCloudPaymentsResellerSubscriptionV1GoogleHomePayload extends \Google\Model
 {
   /**
-   * @var bool
-   */
-  public $attachedToGoogleStructure;
-  /**
    * @var string
    */
   public $partnerStructureId;
 
-  /**
-   * @param bool
-   */
-  public function setAttachedToGoogleStructure($attachedToGoogleStructure)
-  {
-    $this->attachedToGoogleStructure = $attachedToGoogleStructure;
-  }
-  /**
-   * @return bool
-   */
-  public function getAttachedToGoogleStructure()
-  {
-    return $this->attachedToGoogleStructure;
-  }
   /**
    * @param string
    */

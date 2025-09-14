@@ -707,7 +707,7 @@ class Bucket
      *           value must be UTF-8 encoded. See:
      *           https://cloud.google.com/storage/docs/json_api/v1/objects/list#list-object-glob
      * }
-     * @return ObjectIterator
+     * @return ObjectIterator<StorageObject>
      */
     public function objects(array $options = [])
     {
@@ -902,7 +902,6 @@ class Bucket
     {
         $resultLimit = $this->pluck('resultLimit', $options, false);
 
-        /** @var ItemIterator<Notification> */
         return new ItemIterator(
             new PageIterator(
                 function (array $notification) {

@@ -29,10 +29,6 @@ class WorkflowConfig extends \Google\Collection
    */
   public $cronSchedule;
   /**
-   * @var bool
-   */
-  public $disabled;
-  /**
    * @var string
    */
   public $internalMetadata;
@@ -84,20 +80,6 @@ class WorkflowConfig extends \Google\Collection
   public function getCronSchedule()
   {
     return $this->cronSchedule;
-  }
-  /**
-   * @param bool
-   */
-  public function setDisabled($disabled)
-  {
-    $this->disabled = $disabled;
-  }
-  /**
-   * @return bool
-   */
-  public function getDisabled()
-  {
-    return $this->disabled;
   }
   /**
    * @param string

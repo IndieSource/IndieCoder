@@ -32,10 +32,6 @@ class Backup extends \Google\Model
   /**
    * @var string
    */
-  public $databaseVersion;
-  /**
-   * @var string
-   */
   public $description;
   protected $errorType = OperationError::class;
   protected $errorDataType = '';
@@ -47,12 +43,6 @@ class Backup extends \Google\Model
    * @var string
    */
   public $instance;
-  /**
-   * @var string
-   */
-  public $instanceDeletionTime;
-  protected $instanceSettingsType = DatabaseInstance::class;
-  protected $instanceSettingsDataType = '';
   /**
    * @var string
    */
@@ -151,20 +141,6 @@ class Backup extends \Google\Model
   /**
    * @param string
    */
-  public function setDatabaseVersion($databaseVersion)
-  {
-    $this->databaseVersion = $databaseVersion;
-  }
-  /**
-   * @return string
-   */
-  public function getDatabaseVersion()
-  {
-    return $this->databaseVersion;
-  }
-  /**
-   * @param string
-   */
   public function setDescription($description)
   {
     $this->description = $description;
@@ -217,34 +193,6 @@ class Backup extends \Google\Model
   public function getInstance()
   {
     return $this->instance;
-  }
-  /**
-   * @param string
-   */
-  public function setInstanceDeletionTime($instanceDeletionTime)
-  {
-    $this->instanceDeletionTime = $instanceDeletionTime;
-  }
-  /**
-   * @return string
-   */
-  public function getInstanceDeletionTime()
-  {
-    return $this->instanceDeletionTime;
-  }
-  /**
-   * @param DatabaseInstance
-   */
-  public function setInstanceSettings(DatabaseInstance $instanceSettings)
-  {
-    $this->instanceSettings = $instanceSettings;
-  }
-  /**
-   * @return DatabaseInstance
-   */
-  public function getInstanceSettings()
-  {
-    return $this->instanceSettings;
   }
   /**
    * @param string

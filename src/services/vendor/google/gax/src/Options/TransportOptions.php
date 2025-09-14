@@ -37,7 +37,7 @@ use Google\ApiCore\Options\TransportOptions\GrpcFallbackTransportOptions;
 use Google\ApiCore\Options\TransportOptions\GrpcTransportOptions;
 use Google\ApiCore\Options\TransportOptions\RestTransportOptions;
 
-class TransportOptions implements ArrayAccess, OptionsInterface
+class TransportOptions implements ArrayAccess
 {
     use OptionsTrait;
 

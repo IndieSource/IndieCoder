@@ -167,9 +167,6 @@ class Datasets extends \Google\Service\Resource
    * be mapped to IAM Policy version
    * (https://cloud.google.com/iam/docs/policies#versions) and will be used to set
    * policy in IAM.
-   * @opt_param string updateMode Optional. Specifies the fields of dataset that
-   * update/patch operation is targeting By default, both metadata and ACL fields
-   * are updated.
    * @return Dataset
    * @throws \Google\Service\Exception
    */
@@ -222,9 +219,6 @@ class Datasets extends \Google\Service\Resource
    * be mapped to IAM Policy version
    * (https://cloud.google.com/iam/docs/policies#versions) and will be used to set
    * policy in IAM.
-   * @opt_param string updateMode Optional. Specifies the fields of dataset that
-   * update/patch operation is targeting By default, both metadata and ACL fields
-   * are updated.
    * @return Dataset
    * @throws \Google\Service\Exception
    */

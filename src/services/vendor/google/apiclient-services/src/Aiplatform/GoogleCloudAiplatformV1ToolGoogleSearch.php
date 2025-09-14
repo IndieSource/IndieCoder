@@ -17,28 +17,8 @@
 
 namespace Google\Service\Aiplatform;
 
-class GoogleCloudAiplatformV1ToolGoogleSearch extends \Google\Collection
+class GoogleCloudAiplatformV1ToolGoogleSearch extends \Google\Model
 {
-  protected $collection_key = 'excludeDomains';
-  /**
-   * @var string[]
-   */
-  public $excludeDomains;
-
-  /**
-   * @param string[]
-   */
-  public function setExcludeDomains($excludeDomains)
-  {
-    $this->excludeDomains = $excludeDomains;
-  }
-  /**
-   * @return string[]
-   */
-  public function getExcludeDomains()
-  {
-    return $this->excludeDomains;
-  }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.

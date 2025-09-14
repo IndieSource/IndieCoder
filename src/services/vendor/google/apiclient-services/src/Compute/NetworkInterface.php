@@ -67,10 +67,6 @@ class NetworkInterface extends \Google\Collection
    */
   public $nicType;
   /**
-   * @var string
-   */
-  public $parentNicName;
-  /**
    * @var int
    */
   public $queueCount;
@@ -82,10 +78,6 @@ class NetworkInterface extends \Google\Collection
    * @var string
    */
   public $subnetwork;
-  /**
-   * @var int
-   */
-  public $vlan;
 
   /**
    * @param AccessConfig[]
@@ -270,20 +262,6 @@ class NetworkInterface extends \Google\Collection
     return $this->nicType;
   }
   /**
-   * @param string
-   */
-  public function setParentNicName($parentNicName)
-  {
-    $this->parentNicName = $parentNicName;
-  }
-  /**
-   * @return string
-   */
-  public function getParentNicName()
-  {
-    return $this->parentNicName;
-  }
-  /**
    * @param int
    */
   public function setQueueCount($queueCount)
@@ -324,20 +302,6 @@ class NetworkInterface extends \Google\Collection
   public function getSubnetwork()
   {
     return $this->subnetwork;
-  }
-  /**
-   * @param int
-   */
-  public function setVlan($vlan)
-  {
-    $this->vlan = $vlan;
-  }
-  /**
-   * @return int
-   */
-  public function getVlan()
-  {
-    return $this->vlan;
   }
 }
 

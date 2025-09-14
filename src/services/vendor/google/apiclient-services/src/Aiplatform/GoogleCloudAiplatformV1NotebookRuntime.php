@@ -78,8 +78,6 @@ class GoogleCloudAiplatformV1NotebookRuntime extends \Google\Collection
    * @var string
    */
   public $proxyUri;
-  protected $reservationAffinityType = GoogleCloudAiplatformV1NotebookReservationAffinity::class;
-  protected $reservationAffinityDataType = '';
   /**
    * @var string
    */
@@ -364,20 +362,6 @@ class GoogleCloudAiplatformV1NotebookRuntime extends \Google\Collection
   public function getProxyUri()
   {
     return $this->proxyUri;
-  }
-  /**
-   * @param GoogleCloudAiplatformV1NotebookReservationAffinity
-   */
-  public function setReservationAffinity(GoogleCloudAiplatformV1NotebookReservationAffinity $reservationAffinity)
-  {
-    $this->reservationAffinity = $reservationAffinity;
-  }
-  /**
-   * @return GoogleCloudAiplatformV1NotebookReservationAffinity
-   */
-  public function getReservationAffinity()
-  {
-    return $this->reservationAffinity;
   }
   /**
    * @param string

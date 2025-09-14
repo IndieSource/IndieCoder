@@ -17,13 +17,8 @@
 
 namespace Google\Service\WorkloadManager;
 
-class SapDiscoveryResourceInstancePropertiesDiskMount extends \Google\Collection
+class SapDiscoveryResourceInstancePropertiesDiskMount extends \Google\Model
 {
-  protected $collection_key = 'diskNames';
-  /**
-   * @var string[]
-   */
-  public $diskNames;
   /**
    * @var string
    */
@@ -33,20 +28,6 @@ class SapDiscoveryResourceInstancePropertiesDiskMount extends \Google\Collection
    */
   public $name;
 
-  /**
-   * @param string[]
-   */
-  public function setDiskNames($diskNames)
-  {
-    $this->diskNames = $diskNames;
-  }
-  /**
-   * @return string[]
-   */
-  public function getDiskNames()
-  {
-    return $this->diskNames;
-  }
   /**
    * @param string
    */

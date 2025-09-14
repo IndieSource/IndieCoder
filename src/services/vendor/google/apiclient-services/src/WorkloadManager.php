@@ -41,7 +41,6 @@ class WorkloadManager extends \Google\Service
       "https://www.googleapis.com/auth/cloud-platform";
 
   public $projects_locations;
-  public $projects_locations_discoveredprofiles;
   public $projects_locations_evaluations;
   public $projects_locations_evaluations_executions;
   public $projects_locations_evaluations_executions_results;
@@ -49,6 +48,7 @@ class WorkloadManager extends \Google\Service
   public $projects_locations_insights;
   public $projects_locations_operations;
   public $projects_locations_rules;
+  public $projects_locations_sapSystems;
   public $rootUrlTemplate;
 
   /**
@@ -89,43 +89,6 @@ class WorkloadManager extends \Google\Service
               'httpMethod' => 'GET',
               'parameters' => [
                 'name' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'extraLocationTypes' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                  'repeated' => true,
-                ],
-                'filter' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-                'pageSize' => [
-                  'location' => 'query',
-                  'type' => 'integer',
-                ],
-                'pageToken' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-              ],
-            ],
-          ]
-        ]
-    );
-    $this->projects_locations_discoveredprofiles = new WorkloadManager\Resource\ProjectsLocationsDiscoveredprofiles(
-        $this,
-        $this->serviceName,
-        'discoveredprofiles',
-        [
-          'methods' => [
-            'list' => [
-              'path' => 'v1/{+parent}/discoveredprofiles',
-              'httpMethod' => 'GET',
-              'parameters' => [
-                'parent' => [
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
@@ -377,21 +340,7 @@ class WorkloadManager extends \Google\Service
         'insights',
         [
           'methods' => [
-            'delete' => [
-              'path' => 'v1/{+name}',
-              'httpMethod' => 'DELETE',
-              'parameters' => [
-                'name' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'requestId' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-              ],
-            ],'writeInsight' => [
+            'writeInsight' => [
               'path' => 'v1/{+location}/insights:writeInsight',
               'httpMethod' => 'POST',
               'parameters' => [
@@ -486,10 +435,6 @@ class WorkloadManager extends \Google\Service
                   'location' => 'query',
                   'type' => 'string',
                 ],
-                'evaluationType' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
                 'filter' => [
                   'location' => 'query',
                   'type' => 'string',
@@ -499,6 +444,30 @@ class WorkloadManager extends \Google\Service
                   'type' => 'integer',
                 ],
                 'pageToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->projects_locations_sapSystems = new WorkloadManager\Resource\ProjectsLocationsSapSystems(
+        $this,
+        $this->serviceName,
+        'sapSystems',
+        [
+          'methods' => [
+            'delete' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'DELETE',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'requestId' => [
                   'location' => 'query',
                   'type' => 'string',
                 ],

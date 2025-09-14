@@ -25,10 +25,6 @@ class LayerDetails extends \Google\Collection
   /**
    * @var string
    */
-  public $chainId;
-  /**
-   * @var string
-   */
   public $command;
   /**
    * @var string
@@ -52,20 +48,6 @@ class LayerDetails extends \Google\Collection
   public function getBaseImages()
   {
     return $this->baseImages;
-  }
-  /**
-   * @param string
-   */
-  public function setChainId($chainId)
-  {
-    $this->chainId = $chainId;
-  }
-  /**
-   * @return string
-   */
-  public function getChainId()
-  {
-    return $this->chainId;
   }
   /**
    * @param string

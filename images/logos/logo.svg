@@ -1,21 +1,44 @@
-<svg
-	xmlns:svg="http://www.w3.org/2000/svg"
-	xmlns="http://www.w3.org/2000/svg"
-	viewBox="0 0 512 512"
-	height="512"
-	width="512">
-
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
 	<defs>
-		<clipPath id="rounded-rect">
-			<rect width="512" height="512" x="0" y="0" rx="128" ry="128" fill="hsl(220, 100%, 66%)" stroke="hsl(220, 100%, 66%)" />
-		</clipPath>
+		<style>
+			#user {
+				stroke: white;
+				stroke-width: 20;
+				stroke-linejoin: round;
+			}
+			
+			#monitor {
+				fill: lightgrey;
+				stroke: none;
+			}
+			
+			#screen {
+				fill: grey;
+			}
+
+			#prompt path {
+				fill: #00ff00;
+			}
+		</style>
 	</defs>
-   
-   <g clip-path="url(#rounded-rect)" >
-		<path d="M 0 0, 512 0, 512 512, 0 512 Z" fill="hsl(220, 100%, 66%)"/>
-		<g style="fill:white">
-			<path d="M 256, 0 0, 256 256, 256 512, 0 Z" />
-			<path d="M 0, 512 256, 256 512, 256 256, 512 Z" />
+
+	<rect width="480" height="480" x="16" y="16" rx="128" ry="128" fill="hsl(25, 100%, 66%)" stroke="hsl(25, 100%, 60%)" stroke-width="16" />
+	
+	<g transform="translate(256, 256) scale(0.9) translate(-256, -256)">
+		<g id="computer" transform="translate(40, 20) scale(18)">
+			<rect id="screen" x="2" y="2" width="20" height="12" />
+			<path id="monitor" d="M2 0c-1.104 0-2 .896-2 2v15c0 1.104.896 2 2 2h20c1.104 0 2-.896 2-2v-15c0-1.104-.896-2-2-2h-20zm20 14h-20v-12h20v12zm-6.599 7c0 1.6 1.744 2.625 2.599 3h-12c.938-.333 2.599-1.317 2.599-3h6.802z" stroke="black" fill="white" />
+
+			<g id="prompt" transform="translate(3, 3) scale(0.01)">
+				<path d="M9.4 86.6C-3.1 74.1-3.1 53.9 9.4 41.4s32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L178.7 256 9.4 86.6z"/>
+			</g>
+		</g>
+
+		<g id="user">
+			<g transform="translate(50, 50)">
+				<path d="M391.113, 426.667H35.554v-88.892c0-22.746, 8.678-45.495, 26.039-62.848 c17.353-17.357, 40.102-26.039, 62.848-26.039h177.783c22.75, 0, 45.495, 8.678, 62.852, 26.039 c17.353, 17.353, 26.035, 40.102, 26.035, 62.848V426.667z"/>
+				<circle cx="215" cy="135" r="110"/>
+			</g>
 		</g>
 	</g>
 </svg>

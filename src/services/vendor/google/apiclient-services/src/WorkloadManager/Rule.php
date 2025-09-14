@@ -51,10 +51,6 @@ class Rule extends \Google\Collection
   /**
    * @var string
    */
-  public $ruleType;
-  /**
-   * @var string
-   */
   public $secondaryCategory;
   /**
    * @var string
@@ -166,20 +162,6 @@ class Rule extends \Google\Collection
   public function getRevisionId()
   {
     return $this->revisionId;
-  }
-  /**
-   * @param string
-   */
-  public function setRuleType($ruleType)
-  {
-    $this->ruleType = $ruleType;
-  }
-  /**
-   * @return string
-   */
-  public function getRuleType()
-  {
-    return $this->ruleType;
   }
   /**
    * @param string

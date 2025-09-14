@@ -55,11 +55,9 @@ class CachePoolPass implements CompilerPassInterface
                 continue;
             }
             $class = $adapter->getClass();
-            $providers = $adapter->getArguments();
             while ($adapter instanceof ChildDefinition) {
                 $adapter = $container->findDefinition($adapter->getParent());
                 $class = $class ?: $adapter->getClass();
-                $providers += $adapter->getArguments();
                 if ($t = $adapter->getTag('cache.pool')) {
                     $tags[0] += $t[0];
                 }
@@ -89,7 +87,7 @@ class CachePoolPass implements CompilerPassInterface
 
             if (ChainAdapter::class === $class) {
                 $adapters = [];
-                foreach ($providers['index_0'] ?? $providers[0] as $provider => $adapter) {
+                foreach ($adapter->getArgument(0) as $provider => $adapter) {
                     if ($adapter instanceof ChildDefinition) {
                         $chainedPool = $adapter;
                     } else {

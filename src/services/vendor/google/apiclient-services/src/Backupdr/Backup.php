@@ -28,8 +28,6 @@ class Backup extends \Google\Collection
    * @var string
    */
   public $backupType;
-  protected $cloudSqlInstanceBackupPropertiesType = CloudSqlInstanceBackupProperties::class;
-  protected $cloudSqlInstanceBackupPropertiesDataType = '';
   protected $computeInstanceBackupPropertiesType = ComputeInstanceBackupProperties::class;
   protected $computeInstanceBackupPropertiesDataType = '';
   /**
@@ -44,8 +42,6 @@ class Backup extends \Google\Collection
    * @var string
    */
   public $description;
-  protected $diskBackupPropertiesType = DiskBackupProperties::class;
-  protected $diskBackupPropertiesDataType = '';
   /**
    * @var string
    */
@@ -134,20 +130,6 @@ class Backup extends \Google\Collection
     return $this->backupType;
   }
   /**
-   * @param CloudSqlInstanceBackupProperties
-   */
-  public function setCloudSqlInstanceBackupProperties(CloudSqlInstanceBackupProperties $cloudSqlInstanceBackupProperties)
-  {
-    $this->cloudSqlInstanceBackupProperties = $cloudSqlInstanceBackupProperties;
-  }
-  /**
-   * @return CloudSqlInstanceBackupProperties
-   */
-  public function getCloudSqlInstanceBackupProperties()
-  {
-    return $this->cloudSqlInstanceBackupProperties;
-  }
-  /**
    * @param ComputeInstanceBackupProperties
    */
   public function setComputeInstanceBackupProperties(ComputeInstanceBackupProperties $computeInstanceBackupProperties)
@@ -202,20 +184,6 @@ class Backup extends \Google\Collection
   public function getDescription()
   {
     return $this->description;
-  }
-  /**
-   * @param DiskBackupProperties
-   */
-  public function setDiskBackupProperties(DiskBackupProperties $diskBackupProperties)
-  {
-    $this->diskBackupProperties = $diskBackupProperties;
-  }
-  /**
-   * @return DiskBackupProperties
-   */
-  public function getDiskBackupProperties()
-  {
-    return $this->diskBackupProperties;
   }
   /**
    * @param string

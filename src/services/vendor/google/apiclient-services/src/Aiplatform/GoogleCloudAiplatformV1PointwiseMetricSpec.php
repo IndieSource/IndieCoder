@@ -19,8 +19,6 @@ namespace Google\Service\Aiplatform;
 
 class GoogleCloudAiplatformV1PointwiseMetricSpec extends \Google\Model
 {
-  protected $customOutputFormatConfigType = GoogleCloudAiplatformV1CustomOutputFormatConfig::class;
-  protected $customOutputFormatConfigDataType = '';
   /**
    * @var string
    */
@@ -30,20 +28,6 @@ class GoogleCloudAiplatformV1PointwiseMetricSpec extends \Google\Model
    */
   public $systemInstruction;
 
-  /**
-   * @param GoogleCloudAiplatformV1CustomOutputFormatConfig
-   */
-  public function setCustomOutputFormatConfig(GoogleCloudAiplatformV1CustomOutputFormatConfig $customOutputFormatConfig)
-  {
-    $this->customOutputFormatConfig = $customOutputFormatConfig;
-  }
-  /**
-   * @return GoogleCloudAiplatformV1CustomOutputFormatConfig
-   */
-  public function getCustomOutputFormatConfig()
-  {
-    return $this->customOutputFormatConfig;
-  }
   /**
    * @param string
    */

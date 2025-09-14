@@ -1604,10 +1604,6 @@ class Storage extends \Google\Service
                   'location' => 'query',
                   'type' => 'string',
                 ],
-                'filter' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
                 'includeFoldersAsPrefixes' => [
                   'location' => 'query',
                   'type' => 'boolean',
@@ -1701,10 +1697,6 @@ class Storage extends \Google\Service
                   'type' => 'string',
                 ],
                 'ifSourceMetagenerationNotMatch' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-                'projection' => [
                   'location' => 'query',
                   'type' => 'string',
                 ],

@@ -100,10 +100,6 @@ class JobConfigurationLoad extends \Google\Collection
    * @var string
    */
   public $nullMarker;
-  /**
-   * @var string[]
-   */
-  public $nullMarkers;
   protected $parquetOptionsType = ParquetOptions::class;
   protected $parquetOptionsDataType = '';
   /**
@@ -142,10 +138,6 @@ class JobConfigurationLoad extends \Google\Collection
    * @var int
    */
   public $skipLeadingRows;
-  /**
-   * @var string
-   */
-  public $sourceColumnMatch;
   /**
    * @var string
    */
@@ -500,20 +492,6 @@ class JobConfigurationLoad extends \Google\Collection
     return $this->nullMarker;
   }
   /**
-   * @param string[]
-   */
-  public function setNullMarkers($nullMarkers)
-  {
-    $this->nullMarkers = $nullMarkers;
-  }
-  /**
-   * @return string[]
-   */
-  public function getNullMarkers()
-  {
-    return $this->nullMarkers;
-  }
-  /**
    * @param ParquetOptions
    */
   public function setParquetOptions(ParquetOptions $parquetOptions)
@@ -666,20 +644,6 @@ class JobConfigurationLoad extends \Google\Collection
   public function getSkipLeadingRows()
   {
     return $this->skipLeadingRows;
-  }
-  /**
-   * @param string
-   */
-  public function setSourceColumnMatch($sourceColumnMatch)
-  {
-    $this->sourceColumnMatch = $sourceColumnMatch;
-  }
-  /**
-   * @return string
-   */
-  public function getSourceColumnMatch()
-  {
-    return $this->sourceColumnMatch;
   }
   /**
    * @param string

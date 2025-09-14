@@ -30,8 +30,6 @@ class Subscription extends \Google\Collection
    * @var string
    */
   public $dataExchange;
-  protected $destinationDatasetType = DestinationDataset::class;
-  protected $destinationDatasetDataType = '';
   /**
    * @var string
    */
@@ -114,20 +112,6 @@ class Subscription extends \Google\Collection
   public function getDataExchange()
   {
     return $this->dataExchange;
-  }
-  /**
-   * @param DestinationDataset
-   */
-  public function setDestinationDataset(DestinationDataset $destinationDataset)
-  {
-    $this->destinationDataset = $destinationDataset;
-  }
-  /**
-   * @return DestinationDataset
-   */
-  public function getDestinationDataset()
-  {
-    return $this->destinationDataset;
   }
   /**
    * @param string

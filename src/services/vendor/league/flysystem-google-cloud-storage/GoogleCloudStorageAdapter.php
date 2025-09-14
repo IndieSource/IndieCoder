@@ -60,8 +60,7 @@ class GoogleCloudStorageAdapter implements FilesystemAdapter, PublicUrlGenerator
         string $prefix = '',
         ?VisibilityHandler $visibilityHandler = null,
         private string $defaultVisibility = Visibility::PRIVATE,
-        ?MimeTypeDetector $mimeTypeDetector = null,
-        private bool $streamReads = false,
+        ?MimeTypeDetector $mimeTypeDetector = null
     ) {
         $this->prefixer = new PathPrefixer($prefix);
         $this->visibilityHandler = $visibilityHandler ?? new PortableVisibilityHandler();
@@ -171,13 +170,9 @@ class GoogleCloudStorageAdapter implements FilesystemAdapter, PublicUrlGenerator
     public function readStream(string $path)
     {
         $prefixedPath = $this->prefixer->prefixPath($path);
-        $options = [];
-        if ($this->streamReads) {
-            $options['restOptions']['stream'] = true;
-        }
 
         try {
-            $stream = $this->bucket->object($prefixedPath)->downloadAsStream($options)->detach();
+            $stream = $this->bucket->object($prefixedPath)->downloadAsStream()->detach();
         } catch (Throwable $exception) {
             throw UnableToReadFile::fromLocation($path, $exception->getMessage(), $exception);
         }

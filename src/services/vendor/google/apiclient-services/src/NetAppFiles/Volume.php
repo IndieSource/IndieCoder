@@ -52,10 +52,6 @@ class Volume extends \Google\Collection
    * @var bool
    */
   public $hasReplication;
-  /**
-   * @var string
-   */
-  public $hotTierSizeUsedGib;
   protected $hybridReplicationParametersType = HybridReplicationParameters::class;
   protected $hybridReplicationParametersDataType = '';
   /**
@@ -145,7 +141,6 @@ class Volume extends \Google\Collection
    * @var string
    */
   public $storagePool;
-  public $throughputMibps;
   protected $tieringPolicyType = TieringPolicy::class;
   protected $tieringPolicyDataType = '';
   /**
@@ -286,20 +281,6 @@ class Volume extends \Google\Collection
   public function getHasReplication()
   {
     return $this->hasReplication;
-  }
-  /**
-   * @param string
-   */
-  public function setHotTierSizeUsedGib($hotTierSizeUsedGib)
-  {
-    $this->hotTierSizeUsedGib = $hotTierSizeUsedGib;
-  }
-  /**
-   * @return string
-   */
-  public function getHotTierSizeUsedGib()
-  {
-    return $this->hotTierSizeUsedGib;
   }
   /**
    * @param HybridReplicationParameters
@@ -644,14 +625,6 @@ class Volume extends \Google\Collection
   public function getStoragePool()
   {
     return $this->storagePool;
-  }
-  public function setThroughputMibps($throughputMibps)
-  {
-    $this->throughputMibps = $throughputMibps;
-  }
-  public function getThroughputMibps()
-  {
-    return $this->throughputMibps;
   }
   /**
    * @param TieringPolicy

@@ -27,7 +27,7 @@ use Google\Client;
  *
  * <p>
  * For more information about this service, see the API
- * <a href="https://developers.google.com/workspace/drive/" target="_blank">Documentation</a>
+ * <a href="https://developers.google.com/drive/" target="_blank">Documentation</a>
  * </p>
  *
  * @author Google, Inc.
@@ -964,7 +964,27 @@ class Drive extends \Google\Service
         'operations',
         [
           'methods' => [
-            'get' => [
+            'cancel' => [
+              'path' => 'operations/{name}:cancel',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'delete' => [
+              'path' => 'operations/{name}',
+              'httpMethod' => 'DELETE',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'get' => [
               'path' => 'operations/{name}',
               'httpMethod' => 'GET',
               'parameters' => [
@@ -972,6 +992,27 @@ class Drive extends \Google\Service
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
+                ],
+              ],
+            ],'list' => [
+              'path' => 'operations',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'filter' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'name' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'pageSize' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'pageToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
                 ],
               ],
             ],
@@ -996,10 +1037,6 @@ class Drive extends \Google\Service
                 'emailMessage' => [
                   'location' => 'query',
                   'type' => 'string',
-                ],
-                'enforceExpansiveAccess' => [
-                  'location' => 'query',
-                  'type' => 'boolean',
                 ],
                 'enforceSingleParent' => [
                   'location' => 'query',

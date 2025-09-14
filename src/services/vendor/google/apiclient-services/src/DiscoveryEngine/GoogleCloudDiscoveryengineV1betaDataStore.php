@@ -20,10 +20,6 @@ namespace Google\Service\DiscoveryEngine;
 class GoogleCloudDiscoveryengineV1betaDataStore extends \Google\Collection
 {
   protected $collection_key = 'solutionTypes';
-  /**
-   * @var bool
-   */
-  public $aclEnabled;
   protected $advancedSiteSearchConfigType = GoogleCloudDiscoveryengineV1betaAdvancedSiteSearchConfig::class;
   protected $advancedSiteSearchConfigDataType = '';
   protected $billingEstimationType = GoogleCloudDiscoveryengineV1betaDataStoreBillingEstimation::class;
@@ -85,20 +81,6 @@ class GoogleCloudDiscoveryengineV1betaDataStore extends \Google\Collection
   protected $workspaceConfigType = GoogleCloudDiscoveryengineV1betaWorkspaceConfig::class;
   protected $workspaceConfigDataType = '';
 
-  /**
-   * @param bool
-   */
-  public function setAclEnabled($aclEnabled)
-  {
-    $this->aclEnabled = $aclEnabled;
-  }
-  /**
-   * @return bool
-   */
-  public function getAclEnabled()
-  {
-    return $this->aclEnabled;
-  }
   /**
    * @param GoogleCloudDiscoveryengineV1betaAdvancedSiteSearchConfig
    */

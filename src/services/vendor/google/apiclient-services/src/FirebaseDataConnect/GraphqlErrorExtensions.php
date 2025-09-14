@@ -22,48 +22,8 @@ class GraphqlErrorExtensions extends \Google\Model
   /**
    * @var string
    */
-  public $code;
-  /**
-   * @var string
-   */
-  public $debugDetails;
-  /**
-   * @var string
-   */
   public $file;
-  /**
-   * @var string
-   */
-  public $resource;
 
-  /**
-   * @param string
-   */
-  public function setCode($code)
-  {
-    $this->code = $code;
-  }
-  /**
-   * @return string
-   */
-  public function getCode()
-  {
-    return $this->code;
-  }
-  /**
-   * @param string
-   */
-  public function setDebugDetails($debugDetails)
-  {
-    $this->debugDetails = $debugDetails;
-  }
-  /**
-   * @return string
-   */
-  public function getDebugDetails()
-  {
-    return $this->debugDetails;
-  }
   /**
    * @param string
    */
@@ -77,20 +37,6 @@ class GraphqlErrorExtensions extends \Google\Model
   public function getFile()
   {
     return $this->file;
-  }
-  /**
-   * @param string
-   */
-  public function setResource($resource)
-  {
-    $this->resource = $resource;
-  }
-  /**
-   * @return string
-   */
-  public function getResource()
-  {
-    return $this->resource;
   }
 }
 

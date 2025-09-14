@@ -24,6 +24,8 @@ class GooglePubsubV1Subscription extends \Google\Collection
    * @var int
    */
   public $ackDeadlineSeconds;
+  protected $analyticsHubSubscriptionInfoType = AnalyticsHubSubscriptionInfo::class;
+  protected $analyticsHubSubscriptionInfoDataType = '';
   protected $bigqueryConfigType = BigQueryConfig::class;
   protected $bigqueryConfigDataType = '';
   protected $cloudStorageConfigType = CloudStorageConfig::class;
@@ -70,6 +72,14 @@ class GooglePubsubV1Subscription extends \Google\Collection
   public $retainAckedMessages;
   protected $retryPolicyType = RetryPolicy::class;
   protected $retryPolicyDataType = '';
+  /**
+   * @var string
+   */
+  public $state;
+  /**
+   * @var string
+   */
+  public $topicMessageRetentionDuration;
 
   /**
    * @param int
@@ -84,6 +94,20 @@ class GooglePubsubV1Subscription extends \Google\Collection
   public function getAckDeadlineSeconds()
   {
     return $this->ackDeadlineSeconds;
+  }
+  /**
+   * @param AnalyticsHubSubscriptionInfo
+   */
+  public function setAnalyticsHubSubscriptionInfo(AnalyticsHubSubscriptionInfo $analyticsHubSubscriptionInfo)
+  {
+    $this->analyticsHubSubscriptionInfo = $analyticsHubSubscriptionInfo;
+  }
+  /**
+   * @return AnalyticsHubSubscriptionInfo
+   */
+  public function getAnalyticsHubSubscriptionInfo()
+  {
+    return $this->analyticsHubSubscriptionInfo;
   }
   /**
    * @param BigQueryConfig
@@ -294,6 +318,34 @@ class GooglePubsubV1Subscription extends \Google\Collection
   public function getRetryPolicy()
   {
     return $this->retryPolicy;
+  }
+  /**
+   * @param string
+   */
+  public function setState($state)
+  {
+    $this->state = $state;
+  }
+  /**
+   * @return string
+   */
+  public function getState()
+  {
+    return $this->state;
+  }
+  /**
+   * @param string
+   */
+  public function setTopicMessageRetentionDuration($topicMessageRetentionDuration)
+  {
+    $this->topicMessageRetentionDuration = $topicMessageRetentionDuration;
+  }
+  /**
+   * @return string
+   */
+  public function getTopicMessageRetentionDuration()
+  {
+    return $this->topicMessageRetentionDuration;
   }
 }
 

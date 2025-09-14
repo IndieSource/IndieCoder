@@ -19,7 +19,7 @@ namespace Google\Service\BeyondCorp;
 
 class GoogleCloudBeyondcorpSecuritygatewaysV1Application extends \Google\Collection
 {
-  protected $collection_key = 'upstreams';
+  protected $collection_key = 'endpointMatchers';
   /**
    * @var string
    */
@@ -38,8 +38,6 @@ class GoogleCloudBeyondcorpSecuritygatewaysV1Application extends \Google\Collect
    * @var string
    */
   public $updateTime;
-  protected $upstreamsType = GoogleCloudBeyondcorpSecuritygatewaysV1ApplicationUpstream::class;
-  protected $upstreamsDataType = 'array';
 
   /**
    * @param string
@@ -110,20 +108,6 @@ class GoogleCloudBeyondcorpSecuritygatewaysV1Application extends \Google\Collect
   public function getUpdateTime()
   {
     return $this->updateTime;
-  }
-  /**
-   * @param GoogleCloudBeyondcorpSecuritygatewaysV1ApplicationUpstream[]
-   */
-  public function setUpstreams($upstreams)
-  {
-    $this->upstreams = $upstreams;
-  }
-  /**
-   * @return GoogleCloudBeyondcorpSecuritygatewaysV1ApplicationUpstream[]
-   */
-  public function getUpstreams()
-  {
-    return $this->upstreams;
   }
 }
 

@@ -22,8 +22,6 @@ use Google\Service\Compute\AddressList;
 use Google\Service\Compute\GlobalAddressesMoveRequest;
 use Google\Service\Compute\GlobalSetLabelsRequest;
 use Google\Service\Compute\Operation;
-use Google\Service\Compute\TestPermissionsRequest;
-use Google\Service\Compute\TestPermissionsResponse;
 
 /**
  * The "globalAddresses" collection of methods.
@@ -215,23 +213,6 @@ class GlobalAddresses extends \Google\Service\Resource
     $params = ['project' => $project, 'resource' => $resource, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('setLabels', [$params], Operation::class);
-  }
-  /**
-   * Returns permissions that a caller has on the specified resource.
-   * (globalAddresses.testIamPermissions)
-   *
-   * @param string $project Project ID for this request.
-   * @param string $resource Name or id of the resource for this request.
-   * @param TestPermissionsRequest $postBody
-   * @param array $optParams Optional parameters.
-   * @return TestPermissionsResponse
-   * @throws \Google\Service\Exception
-   */
-  public function testIamPermissions($project, $resource, TestPermissionsRequest $postBody, $optParams = [])
-  {
-    $params = ['project' => $project, 'resource' => $resource, 'postBody' => $postBody];
-    $params = array_merge($params, $optParams);
-    return $this->call('testIamPermissions', [$params], TestPermissionsResponse::class);
   }
 }
 

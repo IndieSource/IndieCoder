@@ -154,16 +154,6 @@ class CloudRetail extends \Google\Service
                   'required' => true,
                 ],
               ],
-            ],'getConversationalSearchCustomizationConfig' => [
-              'path' => 'v2/{+name}/conversationalSearchCustomizationConfig',
-              'httpMethod' => 'GET',
-              'parameters' => [
-                'name' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
             ],'getDefaultBranch' => [
               'path' => 'v2/{+catalog}:getDefaultBranch',
               'httpMethod' => 'GET',
@@ -245,20 +235,6 @@ class CloudRetail extends \Google\Service
               'httpMethod' => 'PATCH',
               'parameters' => [
                 'name' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'updateMask' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-              ],
-            ],'updateConversationalSearchCustomizationConfig' => [
-              'path' => 'v2/{+catalog}/conversationalSearchCustomizationConfig',
-              'httpMethod' => 'PATCH',
-              'parameters' => [
-                'catalog' => [
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,

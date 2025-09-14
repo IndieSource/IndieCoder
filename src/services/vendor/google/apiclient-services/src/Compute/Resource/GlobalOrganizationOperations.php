@@ -51,12 +51,11 @@ class GlobalOrganizationOperations extends \Google\Service\Resource
    * Retrieves the specified Operations resource. Gets a list of operations by
    * making a `list()` request. (globalOrganizationOperations.get)
    *
-   * @param string $operation Name of the Operations resource to return. Parent is
-   * derived from this field.
+   * @param string $operation Name of the Operations resource to return, or its
+   * unique numeric identifier.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string parentId Parent ID for this request. Not used. Parent is
-   * derived from resource_id.
+   * @opt_param string parentId Parent ID for this request.
    * @return Operation
    * @throws \Google\Service\Exception
    */

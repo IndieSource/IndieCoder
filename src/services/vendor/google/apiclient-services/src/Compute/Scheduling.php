@@ -65,10 +65,6 @@ class Scheduling extends \Google\Collection
    */
   public $provisioningModel;
   /**
-   * @var bool
-   */
-  public $skipGuestOsShutdown;
-  /**
    * @var string
    */
   public $terminationTime;
@@ -254,20 +250,6 @@ class Scheduling extends \Google\Collection
   public function getProvisioningModel()
   {
     return $this->provisioningModel;
-  }
-  /**
-   * @param bool
-   */
-  public function setSkipGuestOsShutdown($skipGuestOsShutdown)
-  {
-    $this->skipGuestOsShutdown = $skipGuestOsShutdown;
-  }
-  /**
-   * @return bool
-   */
-  public function getSkipGuestOsShutdown()
-  {
-    return $this->skipGuestOsShutdown;
   }
   /**
    * @param string

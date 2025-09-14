@@ -98,8 +98,6 @@ class GoogleCloudDiscoveryengineV1alphaSearchRequest extends \Google\Collection
    * @var string
    */
   public $regionCode;
-  protected $relevanceScoreSpecType = GoogleCloudDiscoveryengineV1alphaSearchRequestRelevanceScoreSpec::class;
-  protected $relevanceScoreSpecDataType = '';
   /**
    * @var string
    */
@@ -122,10 +120,6 @@ class GoogleCloudDiscoveryengineV1alphaSearchRequest extends \Google\Collection
   protected $sessionSpecDataType = '';
   protected $spellCorrectionSpecType = GoogleCloudDiscoveryengineV1alphaSearchRequestSpellCorrectionSpec::class;
   protected $spellCorrectionSpecDataType = '';
-  /**
-   * @var bool
-   */
-  public $useLatestData;
   protected $userInfoType = GoogleCloudDiscoveryengineV1alphaUserInfo::class;
   protected $userInfoDataType = '';
   /**
@@ -488,20 +482,6 @@ class GoogleCloudDiscoveryengineV1alphaSearchRequest extends \Google\Collection
     return $this->regionCode;
   }
   /**
-   * @param GoogleCloudDiscoveryengineV1alphaSearchRequestRelevanceScoreSpec
-   */
-  public function setRelevanceScoreSpec(GoogleCloudDiscoveryengineV1alphaSearchRequestRelevanceScoreSpec $relevanceScoreSpec)
-  {
-    $this->relevanceScoreSpec = $relevanceScoreSpec;
-  }
-  /**
-   * @return GoogleCloudDiscoveryengineV1alphaSearchRequestRelevanceScoreSpec
-   */
-  public function getRelevanceScoreSpec()
-  {
-    return $this->relevanceScoreSpec;
-  }
-  /**
    * @param string
    */
   public function setRelevanceThreshold($relevanceThreshold)
@@ -598,20 +578,6 @@ class GoogleCloudDiscoveryengineV1alphaSearchRequest extends \Google\Collection
   public function getSpellCorrectionSpec()
   {
     return $this->spellCorrectionSpec;
-  }
-  /**
-   * @param bool
-   */
-  public function setUseLatestData($useLatestData)
-  {
-    $this->useLatestData = $useLatestData;
-  }
-  /**
-   * @return bool
-   */
-  public function getUseLatestData()
-  {
-    return $this->useLatestData;
   }
   /**
    * @param GoogleCloudDiscoveryengineV1alphaUserInfo

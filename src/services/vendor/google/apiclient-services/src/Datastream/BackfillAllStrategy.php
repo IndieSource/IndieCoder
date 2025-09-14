@@ -19,8 +19,6 @@ namespace Google\Service\Datastream;
 
 class BackfillAllStrategy extends \Google\Model
 {
-  protected $mongodbExcludedObjectsType = MongodbCluster::class;
-  protected $mongodbExcludedObjectsDataType = '';
   protected $mysqlExcludedObjectsType = MysqlRdbms::class;
   protected $mysqlExcludedObjectsDataType = '';
   protected $oracleExcludedObjectsType = OracleRdbms::class;
@@ -32,20 +30,6 @@ class BackfillAllStrategy extends \Google\Model
   protected $sqlServerExcludedObjectsType = SqlServerRdbms::class;
   protected $sqlServerExcludedObjectsDataType = '';
 
-  /**
-   * @param MongodbCluster
-   */
-  public function setMongodbExcludedObjects(MongodbCluster $mongodbExcludedObjects)
-  {
-    $this->mongodbExcludedObjects = $mongodbExcludedObjects;
-  }
-  /**
-   * @return MongodbCluster
-   */
-  public function getMongodbExcludedObjects()
-  {
-    return $this->mongodbExcludedObjects;
-  }
   /**
    * @param MysqlRdbms
    */

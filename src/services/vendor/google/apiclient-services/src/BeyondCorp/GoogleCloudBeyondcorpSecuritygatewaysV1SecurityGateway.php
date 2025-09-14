@@ -27,10 +27,6 @@ class GoogleCloudBeyondcorpSecuritygatewaysV1SecurityGateway extends \Google\Col
   /**
    * @var string
    */
-  public $delegatingServiceAccount;
-  /**
-   * @var string
-   */
   public $displayName;
   /**
    * @var string[]
@@ -64,20 +60,6 @@ class GoogleCloudBeyondcorpSecuritygatewaysV1SecurityGateway extends \Google\Col
   public function getCreateTime()
   {
     return $this->createTime;
-  }
-  /**
-   * @param string
-   */
-  public function setDelegatingServiceAccount($delegatingServiceAccount)
-  {
-    $this->delegatingServiceAccount = $delegatingServiceAccount;
-  }
-  /**
-   * @return string
-   */
-  public function getDelegatingServiceAccount()
-  {
-    return $this->delegatingServiceAccount;
   }
   /**
    * @param string

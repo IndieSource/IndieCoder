@@ -19,8 +19,6 @@ namespace Google\Service\Datastream;
 
 class SourceObjectIdentifier extends \Google\Model
 {
-  protected $mongodbIdentifierType = MongodbObjectIdentifier::class;
-  protected $mongodbIdentifierDataType = '';
   protected $mysqlIdentifierType = MysqlObjectIdentifier::class;
   protected $mysqlIdentifierDataType = '';
   protected $oracleIdentifierType = OracleObjectIdentifier::class;
@@ -32,20 +30,6 @@ class SourceObjectIdentifier extends \Google\Model
   protected $sqlServerIdentifierType = SqlServerObjectIdentifier::class;
   protected $sqlServerIdentifierDataType = '';
 
-  /**
-   * @param MongodbObjectIdentifier
-   */
-  public function setMongodbIdentifier(MongodbObjectIdentifier $mongodbIdentifier)
-  {
-    $this->mongodbIdentifier = $mongodbIdentifier;
-  }
-  /**
-   * @return MongodbObjectIdentifier
-   */
-  public function getMongodbIdentifier()
-  {
-    return $this->mongodbIdentifier;
-  }
   /**
    * @param MysqlObjectIdentifier
    */
